@@ -21,7 +21,7 @@
           </li>
           <li class="list-group-item">
             <i class="fas fa-check text-success me-2"></i>
-            Equipo de expertos con más de <strong>X años</strong> de experiencia
+            Equipo de expertos con más de <strong>7 años</strong> de experiencia
             en proyectos de alto impacto.
           </li>
           <li class="list-group-item">

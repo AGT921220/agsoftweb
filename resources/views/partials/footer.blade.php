@@ -22,7 +22,8 @@
             <!-- Columna 3 -->
             <div class="col-md-4 mb-4">
                 <h5>Contáctanos</h5>
-                <p><i class="fas fa-phone-alt"></i> <a href="tel:{{ config('site.contact.phone') }}">{{ config('site.contact.phone') }}</a></p>
+                <p><i class="fas fa-phone-alt"></i> <a href="tel:{{ config('site.contact.phone') }}">
+                    {{ config('site.contact.phone') }}</a></p>
                 <p><i class="fas fa-envelope"></i> <a href="mailto:{{ config('site.contact.email') }}">{{ config('site.contact.email') }}</a></p>
                 <p><i class="fas fa-map-marker-alt"></i> {{ config('site.contact.address') }}</p>
             </div>
