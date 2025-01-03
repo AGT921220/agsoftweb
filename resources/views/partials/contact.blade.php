@@ -115,7 +115,7 @@
 
     <!-- Mapa General de San Nicolás -->
     <div class="mt-4" data-aos="fade-up" data-aos-delay="1200">
-      <h5>Ubicación</h5>
+      <h3>Ubicación</h3>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.746755727296!2d-100.30892118459514!3d25.682864383959343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8692b94f7f1d5fdb%3A0x9b3f7a1f3f4c5a8!2sSan%20Nicol%C3%A1s%20de%20los%20Garza%2C%20Nuevo%20Le%C3%B3n!5e0!3m2!1ses-419!2smx!4v1617186487053!5m2!1ses-419!2smx"
         width="100%"
@@ -123,6 +123,7 @@
         style="border:0;"
         allowfullscreen=""
         loading="lazy"
+        title="Mapa de San Nicolás de los Garza, Nuevo León"
       ></iframe>
     </div>
 

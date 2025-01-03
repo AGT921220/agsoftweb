@@ -24,7 +24,7 @@
 
       <!-- Columna 1: Nuestra Misión -->
       <div class="col-12 col-md-4 mb-4" data-aos="fade-left">
-        <h4 class="mb-3">Nuestra Misión</h4>
+        <h3 class="mb-3">Nuestra Misión</h3>
         <p>
           Conectar a las empresas con la innovación tecnológica, ofreciendo
           herramientas digitales que impulsen su competitividad y productividad.

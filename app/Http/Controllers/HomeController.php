@@ -4,11 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Visit;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
     public function index()
     {
+        // dd(config('database.connections.mysql'));
+
         $this->saveRequest();
         return view('index');
     }
@@ -21,7 +24,11 @@ class HomeController extends Controller
         $requestUri = $_SERVER['REQUEST_URI'] ?? null;
         $queryString = $_SERVER['QUERY_STRING'] ?? null;
 
+        // dd(config('database.connections.mysql'));
+        // $test = DB::table('visitas')->get();
+
         $visit = new Visit();
+        // dd($visit);
         $visit->user_agent = $userAgent;
         $visit->ip_address = $ipAddress;
         $visit->referer = $referer;
@@ -29,5 +36,7 @@ class HomeController extends Controller
         $visit->request_uri = $requestUri;
         $visit->query_string = $queryString;
         $visit->save();
+        info($_SERVER);
+
     }
 }

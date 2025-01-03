@@ -409,10 +409,28 @@ footer a:hover {
   padding-top: 1rem;
   font-size: 0.9rem;
   text-align: center;
-  color: #777;
+  color: white;
 }
 
+.contact-icons a {
+    display: flex;
+    flex-direction: column;
+}
 /*****************************************************
  16. Animaciones Keyframes (Hero)
 *****************************************************/
 /* (Incluidas arriba las de typing y fadeInDown) */
+
+
+.client-logo {
+    width: 150px; /* Ancho fijo para las imágenes */
+    height: 100px; /* Alto fijo para las imágenes */
+    object-fit: contain; /* Ajusta la imagen dentro del contenedor */
+  }
+
+  @media (max-width: 576px) {
+    .client-logo {
+      width: 120px; /* Tamaño reducido en pantallas pequeñas */
+      height: 80px;
+    }
+  }

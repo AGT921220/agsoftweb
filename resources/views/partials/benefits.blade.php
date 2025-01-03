@@ -15,7 +15,7 @@
 
     <div class="row mt-5">
       <div class="col-md-6" data-aos="fade-right">
-        <h4>Beneficios clave</h4>
+        <h3>Beneficios clave</h3>
         <ul class="benefits-list mt-3">
           <li>
             <i class="fas fa-chart-line"></i>

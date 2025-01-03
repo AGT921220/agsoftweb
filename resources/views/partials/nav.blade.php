@@ -43,13 +43,13 @@
         <div class="d-none d-lg-flex contact-icons ms-3">
           <a href="tel:{{ config('site.phone') }}" class="btn btn-link"
             ><i class="fas fa-phone-alt"></i
-          ></a>
+          >Llamar</a>
           <a href="mailto:{{ config('site.email') }}" class="btn btn-link"
             ><i class="fas fa-envelope"></i
-          ></a>
+          >Correo</a>
           <a href="{{ config('site.whatsapp_link') }}" class="btn btn-link"
             ><i class="fab fa-whatsapp"></i
-          ></a>
+          >Whatsapp</a>
         </div>
       </div>
     </div>

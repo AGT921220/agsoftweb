@@ -1,0 +1,46 @@
+networks:
+  appnetwork:
+
+services:
+
+  mysql:
+    image: mysql:5.7.32
+    container_name: mysql-agsoftweb
+    restart: always
+    tty: true
+    ports:
+      - "${PORT_MYSQL:-3306}:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD='1234'
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+      - MYSQL_DATABASE=db
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./docker/mysql/agsoftweb.sql:/docker-entrypoint-initdb.d/agsoftweb.sql
+    networks:
+      - appnetwork
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p1234"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: pma-agsoftweb
+    environment:
+      PMA_HOST: mysql-agsoftweb
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    restart: always
+    ports:
+      - "${PORT_PHPMYADMIN:-81}:80"
+    networks:
+      - appnetwork
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+volumes:
+  mysql_data:
