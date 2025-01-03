@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Mail\ContactMail;
 use App\Models\Visit;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Mail;
 
 // Route::get('/', function () {
@@ -28,4 +29,23 @@ Route::get('/visitas-detail', function () {
 
     $visits =Visit::get();
     return $visits?$visits->toArray():[];
+});
+
+Route::get('/clear-cache', function () {
+    // Limpiar caché de la aplicación
+    Artisan::call('cache:clear');
+
+    // Limpiar caché de configuración
+    Artisan::call('config:clear');
+
+    // Limpiar caché de rutas
+    Artisan::call('route:clear');
+
+    // Limpiar caché de vistas
+    Artisan::call('view:clear');
+
+    // Opción para limpiar todo en un paso
+    // Artisan::call('optimize:clear');
+
+    return response()->json(['message' => 'Caches cleared successfully']);
 });
