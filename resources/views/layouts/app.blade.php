@@ -54,7 +54,7 @@
     <!-- CSS Crítico Inline para la sección hero -->
     <style>
         /* CSS Crítico Extraído */
-        .hero {
+        /* .hero {
             background: url('/images/hero.avif') no-repeat center center/cover;
             height: 100vh;
             position: relative;
@@ -66,24 +66,60 @@
             border-radius: 0 0 25px 25px;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 200px;
-            background-color: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(3px);
-            z-index: 1;
-        }
 
         .hero-content {
             position: relative;
             z-index: 2;
             animation-duration: 1.5s;
             animation-name: fadeInDown;
+        } */
+
+        .hero {
+    position: relative;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0 0 25px 25px;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        animation: none !important;
+        opacity: 1 !important;
+    }
+}
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(3px);
+            z-index: 1;
         }
+
+.hero-content {
+    z-index: 1;
+}
+
 
         @keyframes fadeInDown {
             0% {
@@ -168,6 +204,8 @@
 
     <!-- App JS -->
     <script defer src="{{ asset('js/app.js') }}"></script>
+    <link rel="preload" as="image" href="/images/hero.avif" type="image/avif">
+
 </head>
 <body>
     <!-- Botón flotante de WhatsApp -->
