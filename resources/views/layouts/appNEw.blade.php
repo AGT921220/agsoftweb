@@ -20,10 +20,6 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>AgSoftWeb - Desarrolla el Futuro de tu Negocio</title>
 
-    <!-- Favicon -->
-    <link rel="icon" href="{{ asset('images/favicon.ico') }}" type="image/x-icon">
-    <link rel="apple-touch-icon" href="{{ asset('images/favicon.png') }}">
-
     <!-- Bootstrap CSS (Carga diferida) -->
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" media="print" onload="this.media='all'" />
 
@@ -128,7 +124,7 @@
 
         .hero h1 span {
             display: inline-block;
-            animation: typing 1.5s steps(15, end), blink-caret 1s step-end infinite;
+            animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
             white-space: nowrap;
             overflow: hidden;
             border-right: 3px solid #ffd700;
@@ -180,16 +176,6 @@
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154969113-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-154969113-1');
-    </script>
-
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K4XF8WCYPE"></script>
@@ -205,6 +191,17 @@
     </script>
 
 
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-154969113-1');
+    </script>
+
     <!-- SweetAlert2 JS -->
     <script defer src="{{ asset('js/sweetalert2.min.js') }}"></script>
 
@@ -216,8 +213,8 @@
 
 <body>
     <!-- Botón flotante de WhatsApp -->
-    <a href="{{ config('site.whatsapp_link') }}" target="_blank" class="whatsapp-float"
-        title="Contáctanos por WhatsApp" data-aos="zoom-in" data-aos-delay="200">
+    <a href="{{ config('site.whatsapp_link') }}" target="_blank" class="whatsapp-float" title="Contáctanos por WhatsApp"
+        data-aos="zoom-in" data-aos-delay="200">
         <i class="fab fa-whatsapp"></i>
     </a>
 

@@ -23,12 +23,21 @@ Route::get('/test-email', function () {
 });
 
 Route::get('/visitas/{year}', function ($year) {
-    return Visit::whereYear('created_at', $year)->count();
+    return Visit::whereYear('created_at', $year)
+    ->where('user_agent', '!=', null)
+    ->count();
 });
 Route::get('/visitas-detail', function () {
 
-    $visits =Visit::get();
-    return $visits?$visits->toArray():[];
+    $visits = Visit::orderBy('created_at', 'desc')
+        ->select('user_agent', 'ip_address', 'referer', 'request_method', 'request_uri', 'query_string','created_at')
+        ->whereYear('created_at', date('Y'))
+        ->get();
+    return view('visits',compact('visits'));
+
+    // return view('visitas', ['visits' => Visit::get()]);
+    // $visits =Visit::get();
+    // return $visits?$visits->toArray():[];
 });
 
 Route::get('/clear-cache', function () {
