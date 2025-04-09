@@ -1,7 +1,8 @@
 <!-- resources/views/partials/nav.blade.php -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-aos="fade-down">
     <div class="container">
-      <a class="navbar-brand" href="#">AgSoftWeb</a>
+        <img src="{{ asset('images/logo.avif') }}" alt="Logo" width="100px" class="d-inline-block align-text-top me-2">
+      {{-- <a class="navbar-brand" href="#">AgSoftWeb</a> --}}
       <button
         class="navbar-toggler"
         type="button"

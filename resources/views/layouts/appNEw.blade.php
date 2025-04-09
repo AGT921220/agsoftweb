@@ -36,25 +36,6 @@
     <!-- CSS Crítico Inline para la sección hero -->
     <style>
         /* CSS Crítico Extraído */
-        /* .hero {
-            background: url('/images/hero.avif') no-repeat center center/cover;
-            height: 100vh;
-            position: relative;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            border-radius: 0 0 25px 25px;
-        }
-
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            animation-duration: 1.5s;
-            animation-name: fadeInDown;
-        } */
 
         .hero {
             position: relative;
@@ -64,7 +45,6 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            border-radius: 0 0 25px 25px;
             overflow: hidden;
         }
 

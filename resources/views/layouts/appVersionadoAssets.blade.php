@@ -40,7 +40,6 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        border-radius: 0 0 25px 25px;
     }
 
     .hero::before {

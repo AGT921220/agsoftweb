@@ -39,27 +39,6 @@
 
     <!-- CSS Crítico Inline para la sección hero -->
     <style>
-        /* CSS Crítico Extraído */
-        /* .hero {
-            background: url('/images/hero.avif') no-repeat center center/cover;
-            height: 100vh;
-            position: relative;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            border-radius: 0 0 25px 25px;
-        }
-
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            animation-duration: 1.5s;
-            animation-name: fadeInDown;
-        } */
-
         .hero {
             position: relative;
             height: 100vh;
@@ -68,7 +47,6 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            border-radius: 0 0 25px 25px;
             overflow: hidden;
         }
 
@@ -104,6 +82,10 @@
 
         .hero-content {
             z-index: 1;
+            width: 100vw;
+            height: 50vh;
+            overflow: hidden;
+
         }
 
 
@@ -128,7 +110,7 @@
 
         .hero h1 span {
             display: inline-block;
-            animation: typing 1.5s steps(15, end), blink-caret 1s step-end infinite;
+            animation: typing 0s steps(15, end), blink-caret 1s step-end infinite;
             white-space: nowrap;
             overflow: hidden;
             border-right: 3px solid #ffd700;
@@ -173,7 +155,9 @@
     </style>
 
     <!-- Carga Asíncrona del CSS Principal -->
+    <link rel="stylesheet" href="{{ asset('css/custom.css') }}" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="{{ asset('css/app.min.css') }}" media="print" onload="this.media='all'">
+
     <noscript>
         <link rel="stylesheet" href="{{ asset('css/app.min.css') }}">
     </noscript>
