@@ -13,7 +13,7 @@
     <div class="row justify-content-center align-items-center">
       <!-- Cliente 1 -->
       <div
-        class="col-12 col-sm-4 col-md-2 mb-4 d-flex align-items-center justify-content-center"
+        class="col-4 col-sm-4 col-md-2 mb-4 d-flex align-items-center justify-content-center"
         data-aos="flip-left"
       >
         <img
@@ -27,7 +27,7 @@
       </div>
       <!-- Cliente 2 -->
       <div
-        class="col-12 col-sm-4 col-md-2 mb-4 d-flex align-items-center justify-content-center"
+        class="col-4 col-sm-4 col-md-2 mb-4 d-flex align-items-center justify-content-center"
         data-aos="flip-left"
         data-aos-delay="200"
       >
@@ -42,7 +42,7 @@
       </div>
       <!-- Cliente 3 -->
       <div
-        class="col-12 col-sm-4 col-md-2 mb-4 d-flex align-items-center justify-content-center"
+        class="col-4 col-sm-4 col-md-2 mb-4 d-flex align-items-center justify-content-center"
         data-aos="flip-left"
         data-aos-delay="400"
       >
@@ -57,7 +57,7 @@
       </div>
       <!-- Cliente 4 -->
       <div
-        class="col-12 col-sm-4 col-md-2 mb-4 d-flex align-items-center justify-content-center"
+        class="col-4 col-sm-4 col-md-2 mb-4 d-flex align-items-center justify-content-center"
         data-aos="flip-left"
         data-aos-delay="600"
       >
@@ -70,9 +70,25 @@
           loading="lazy"
         />
       </div>
-      <!-- Cliente 5 -->
+            <!-- Cliente 5 -->
       <div
-        class="col-12 col-sm-4 col-md-2 mb-4 d-flex align-items-center justify-content-center"
+        class="col-4 col-sm-4 col-md-2 mb-4 d-flex align-items-center justify-content-center"
+        data-aos="flip-left"
+        data-aos-delay="600"
+      >
+        <img
+          src="images/alan_logo.jpg"
+          alt="Cliente 5 - Alan Saldaña"
+          class="client-logo img-fluid"
+          width="150"
+          height="100"
+          loading="lazy"
+        />
+      </div>
+
+      <!-- Cliente 6 -->
+      <div
+        class="col-4 col-sm-4 col-md-2 mb-4 d-flex align-items-center justify-content-center"
         data-aos="flip-left"
         data-aos-delay="800"
       >
@@ -85,6 +101,7 @@
           loading="lazy"
         />
       </div>
+      
     </div>
   </div>
 </section>

@@ -25,6 +25,16 @@
         <p class="lead mt-3">
             Soluciones digitales que impulsan tu crecimiento y rentabilidad
         </p>
-        <a href="#contact" class="btn btn-hero btn-lg mt-4">Comienza tu proyecto hoy</a>
+
+        <div class="hero-cta d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 mt-4">
+            <a target="_blank" href="https://wa.me/5218114875729" class="btn btn-success btn-lg">
+              💬 Cotiza tu sistema, sitio web o app
+            </a>
+            <a href="#contact" class="btn btn-primary btn-lg">
+              🚀 Cotización sin compromiso
+            </a>
+          </div>
+
+        {{-- <a href="#contact" class="btn btn-hero btn-lg mt-4">Comienza tu proyecto hoy</a> --}}
     </div>
 </section>

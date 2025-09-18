@@ -162,6 +162,26 @@
         <link rel="stylesheet" href="{{ asset('css/app.min.css') }}">
     </noscript>
 
+
+    {{-- <script src="https://cdn.lgrckt-in.com/LogRocket.min.js" crossorigin="anonymous"></script>
+    <script>window.LogRocket && window.LogRocket.init('agsoftweb/pagina-agsoftweb');</script> --}}
+
+    <script src="https://cdn.lgrckt-in.com/LogRocket.min.js" crossorigin="anonymous"></script>
+<script>
+  if (window.LogRocket) {
+    // Inicializa LogRocket con tu proyecto
+    LogRocket.init('agsoftweb/pagina-agsoftweb');
+
+    // Genera un ID aleatorio por sesión para invitados
+    const guestId = 'guest-' + Math.random().toString(36).substring(2, 10);
+
+    // Llama a identify para marcar como completado en LogRocket
+    LogRocket.identify(guestId, {
+      userType: 'guest'
+    });
+  }
+</script>
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154969113-1"></script>
     <script>
@@ -195,6 +215,16 @@
     <!-- App JS -->
     <script defer src="{{ asset('js/app.js') }}"></script>
     <link rel="preload" as="image" href="/images/hero.avif" type="image/avif">
+
+<script src="https://www.google.com/recaptcha/api.js?render={{ config('app.captcha_public_key') }}"></script>
+
+<script>
+    grecaptcha.ready(function() {
+        grecaptcha.execute('{{ config('app.captcha_public_key') }}', {action: 'submit'}).then(function(token) {
+            document.getElementById('recaptcha_token').value = token;
+        });
+    });
+</script>
 
 </head>
 
