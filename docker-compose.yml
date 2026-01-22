@@ -11,16 +11,17 @@ services:
     ports:
       - "${PORT_MYSQL:-3306}:3306"
     environment:
-      - MYSQL_ROOT_PASSWORD='1234'
-      - MYSQL_USER=user
-      - MYSQL_PASSWORD=password
-      - MYSQL_DATABASE=db
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD:-1234}
+      - MYSQL_USER=${MYSQL_USER:-user}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD:-password}
+      - MYSQL_DATABASE=${MYSQL_DATABASE:-db}
     volumes:
       - mysql_data:/var/lib/mysql
+      - ./docker/mysql/init:/docker-entrypoint-initdb.d:ro
     networks:
       - appnetwork
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p1234"]
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD:-1234}"]
       interval: 30s
       timeout: 10s
       retries: 5
@@ -34,6 +35,12 @@ services:
     working_dir: /var/www/html
     volumes:
       - .:/var/www/html
+    environment:
+      - DB_HOST=mysql
+      - DB_PORT=${DB_PORT:-3306}
+      - DB_DATABASE=${MYSQL_DATABASE:-db}
+      - DB_USERNAME=${MYSQL_USER:-user}
+      - DB_PASSWORD=${MYSQL_PASSWORD:-password}
     networks:
       - appnetwork
     depends_on:
