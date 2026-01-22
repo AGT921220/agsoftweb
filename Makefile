@@ -17,3 +17,5 @@ $(TARGET):
 import-db:
 	@docker exec -i mysql-gan mysql -u user -ppassword -e "DROP DATABASE IF EXISTS db; CREATE DATABASE db;"
 	@docker exec -i mysql-gan mysql -u user -ppassword db < storage/app/gan.sql
+enter:
+	docker exec -it php-agsoftweb /bin/bash;

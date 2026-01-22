@@ -17,7 +17,6 @@ services:
       - MYSQL_DATABASE=db
     volumes:
       - mysql_data:/var/lib/mysql
-      - ./docker/mysql/agsoftweb.sql:/docker-entrypoint-initdb.d/agsoftweb.sql
     networks:
       - appnetwork
     healthcheck:
@@ -25,6 +24,35 @@ services:
       interval: 30s
       timeout: 10s
       retries: 5
+
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: php-agsoftweb
+    restart: always
+    working_dir: /var/www/html
+    volumes:
+      - .:/var/www/html
+    networks:
+      - appnetwork
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  nginx:
+    image: nginx:alpine
+    container_name: nginx-agsoftweb
+    restart: always
+    ports:
+      - "${PORT_NGINX:-80}:80"
+    volumes:
+      - .:/var/www/html
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - appnetwork
+    depends_on:
+      - php
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
