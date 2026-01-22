@@ -103,17 +103,15 @@
 
         .hero h1 {
             font-size: 3.5rem;
-            font-weight: 300;
-            color: #ffd700;
+            font-weight: 700;
+            color: #ffffff;
             margin-top: 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
         .hero h1 span {
             display: inline-block;
-            animation: typing 0s steps(15, end), blink-caret 1s step-end infinite;
-            white-space: nowrap;
-            overflow: hidden;
-            border-right: 3px solid #ffd700;
+            white-space: normal;
         }
 
         @keyframes typing {
@@ -151,6 +149,197 @@
             .hero p {
                 font-size: 1rem;
             }
+        }
+
+        /* Botón Flotante WhatsApp Premium */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 32px;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4),
+                        0 8px 30px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: pulse-whatsapp 2s ease-in-out infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) translateY(-2px);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5),
+                        0 12px 40px rgba(37, 211, 102, 0.4);
+            background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
+        }
+
+        .whatsapp-float:active {
+            transform: scale(0.95);
+        }
+
+        .whatsapp-float i {
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-float:hover i {
+            transform: scale(1.1);
+        }
+
+        @keyframes pulse-whatsapp {
+            0%, 100% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4),
+                            0 8px 30px rgba(37, 211, 102, 0.3);
+            }
+            50% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.6),
+                            0 8px 30px rgba(37, 211, 102, 0.5),
+                            0 0 0 10px rgba(37, 211, 102, 0.1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 56px;
+                height: 56px;
+                font-size: 28px;
+            }
+        }
+
+        /* Mejoras Estéticas Generales */
+        .card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 12px;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 8px;
+            font-weight: 500;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #2563EB, #10B981);
+            border-radius: 2px;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Mejoras en Formularios */
+        .form-control,
+        .form_input {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+        }
+
+        .form-control:focus,
+        .form_input:focus {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+            border-color: #2563EB;
+        }
+
+        /* Mejoras en Iconos */
+        .service-icon,
+        .choose-us-icon {
+            transition: all 0.3s ease;
+        }
+
+        .service-icon:hover,
+        .choose-us-icon:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        /* Mejoras en Listas */
+        .benefits-list li,
+        .list-group-item {
+            transition: all 0.2s ease;
+        }
+
+        .benefits-list li:hover,
+        .list-group-item:hover {
+            transform: translateX(5px);
+            background-color: rgba(37, 99, 235, 0.05);
+        }
+
+        /* Navbar mejorado */
+        .navbar {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.95) !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-link {
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            width: 0;
+            height: 2px;
+            background: #2563EB;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 80%;
+            transform: translateX(-50%) scaleX(1);
+        }
+
+        /* Accordion mejorado */
+        .accordion-button {
+            transition: all 0.3s ease;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(16, 185, 129, 0.1));
+        }
+
+        /* Animación suave para elementos con AOS */
+        [data-aos] {
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
     </style>
 
@@ -230,10 +419,7 @@
 
 <body>
     <!-- Botón flotante de WhatsApp -->
-    <a href="{{ config('site.whatsapp_link') }}" target="_blank" class="whatsapp-float"
-        title="Contáctanos por WhatsApp" data-aos="zoom-in" data-aos-delay="200">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    @include('components.whatsapp-float')
 
     <!-- Navbar -->
     @include('partials.nav')

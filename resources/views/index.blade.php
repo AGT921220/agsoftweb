@@ -24,7 +24,7 @@
   @include('partials.why-choose-us')
 
   {{-- FAQ Section --}}
-  @include('partials.faq')
+  {{-- @include('partials.faq') --}}
 
   {{-- Contact Section --}}
   @include('partials.contact')

@@ -8,7 +8,7 @@
   <div class="container">
     <h2 class="section-title text-center">Nosotros</h2>
     <p class="text-center lead mb-5">
-      Somos un equipo comprometido con la innovación y la excelencia
+      Especialistas en automatizar procesos y reducir costos operativos con sistemas a medida
     </p>
     <div class="row">
       <!-- Imagen comentada para futuras inclusiones -->
@@ -26,8 +26,7 @@
       <div class="col-12 col-md-4 mb-4" data-aos="fade-left">
         <h3 class="mb-3">Nuestra Misión</h3>
         <p>
-          Conectar a las empresas con la innovación tecnológica, ofreciendo
-          herramientas digitales que impulsen su competitividad y productividad.
+          Ayudar a las empresas a ahorrar tiempo y dinero automatizando procesos que hoy llevan en Excel. Sistemas que reducen errores y mejoran el control.
         </p>
       </div>
 
@@ -35,9 +34,7 @@
       <div class="col-12 col-md-4 mb-4" data-aos="fade-left" data-aos-delay="200">
         <h4 class="mb-3">Nuestra Visión</h4>
         <p>
-          Convertirnos en un referente en el desarrollo de soluciones web y
-          móviles, reconocidos por la calidad y el valor agregado que aportamos
-          a cada proyecto.
+          Ser el socio tecnológico que las PYMES eligen para digitalizar procesos críticos. Reconocidos por resultados medibles: menos errores, menos tiempo, más control.
         </p>
       </div>
 
@@ -45,14 +42,10 @@
       <div class="col-12 col-md-4 mb-4" data-aos="fade-left" data-aos-delay="400">
         <h4 class="mb-3">Nuestros Valores</h4>
         <p>
-          <strong>Compromiso:</strong> Nos involucramos al 100% con cada
-          proyecto, midiendo nuestro éxito a través de tus resultados.<br />
-          <strong>Innovación:</strong> Buscamos siempre la mejor tecnología y
-          metodologías para obtener un producto de vanguardia.<br />
-          <strong>Transparencia:</strong> Mantenemos comunicación clara y
-          constante, sin sorpresas de último momento.<br />
-          <strong>Trabajo en Equipo:</strong> Creemos en la colaboración y
-          el intercambio de ideas para obtener soluciones más completas.
+          <strong>Resultados medibles:</strong> Nos enfocamos en ahorro de tiempo, reducción de errores y mejor control. Eso es lo que importa.<br />
+          <strong>Transparencia:</strong> Comunicación clara sobre alcance, tiempo y costo. Sin sorpresas.<br />
+          <strong>Entregas por etapas:</strong> Ves avance real cada 2 semanas. No esperas meses para ver resultados.<br />
+          <strong>Soporte continuo:</strong> Tu sistema sigue funcionando con mantenimiento y mejoras cuando las necesites.
         </p>
       </div>
     </div>

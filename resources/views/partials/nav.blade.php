@@ -34,9 +34,9 @@
           <li class="nav-item">
             <a class="nav-link text-dark" href="#why-choose-us">Por qué elegirnos</a>
           </li>
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a class="nav-link text-dark" href="#faq">FAQ</a>
-          </li>
+          </li> --}}
           <li class="nav-item">
             <a class="nav-link text-dark" href="#contact">Contacto</a>
           </li>

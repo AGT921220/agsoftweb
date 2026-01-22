@@ -7,8 +7,7 @@
   <div class="container">
     <h2 class="section-title">Clientes que confían en nosotros</h2>
     <p class="mb-5">
-      Hemos colaborado con empresas diversas que valoran la innovación y la
-      calidad
+      Empresas que automatizaron sus procesos y mejoraron el control de su operación
     </p>
     <div class="row justify-content-center align-items-center">
       <!-- Cliente 1 -->

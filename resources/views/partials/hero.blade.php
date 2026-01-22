@@ -23,18 +23,22 @@
     <div class="hero-content">
         <h1><span>Desarrolla el Futuro de tu Negocio</span></h1>
         <p class="lead mt-3">
-            Soluciones digitales que impulsan tu crecimiento y rentabilidad
+            Automatiza procesos, reduce errores y ahorra tiempo con sistemas a medida que reemplazan Excel y mejoran el control de tu operación
         </p>
 
         <div class="hero-cta d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 mt-4">
-            <a target="_blank" href="https://wa.me/5218114875729" class="btn btn-success btn-lg">
-              💬 Cotiza tu sistema, sitio web o app
-            </a>
-            <a href="#contact" class="btn btn-primary btn-lg">
-              🚀 Cotización sin compromiso
-            </a>
+            <x-whatsapp-button 
+                label="Cotizar por WhatsApp" 
+                tracking="whatsapp_hero_primary"
+                class="shadow-lg" />
+            <x-email-button 
+                label="Enviar correo" 
+                tracking="email_hero_secondary"
+                class="shadow-lg" />
           </div>
 
-        {{-- <a href="#contact" class="btn btn-hero btn-lg mt-4">Comienza tu proyecto hoy</a> --}}
+        <p class="mt-3 mb-0 small text-white fw-semibold">
+            <i class="fas fa-clock me-2"></i>{{ config('contact.response_time.whatsapp') }}
+        </p>
     </div>
 </section>

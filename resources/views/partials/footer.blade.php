@@ -12,7 +12,7 @@
                 <ul class="list-unstyled">
                     <li><a href="{{ config('site.useful_links.services') }}" rel="noopener">Servicios</a></li>
                     {{-- <li><a href="{{ config('site.useful_links.projects') }}" rel="noopener">Proyectos</a></li> --}}
-                    <li><a href="{{ config('site.useful_links.faq') }}" rel="noopener">FAQ</a></li>
+                    {{-- <li><a href="{{ config('site.useful_links.faq') }}" rel="noopener">FAQ</a></li> --}}
                     <li><a href="{{ config('site.useful_links.contact') }}" rel="noopener">Contacto</a></li>
                 </ul>
             </div>

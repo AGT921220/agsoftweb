@@ -23,7 +23,7 @@
             aria-expanded="false"
             aria-controls="collapseOne"
           >
-            ¿Cómo inicio mi proyecto con AgSoftWeb?
+            ¿Cómo inicio mi proyecto?
           </button>
         </h2>
         <div
@@ -33,7 +33,7 @@
           data-bs-parent="#accordionFAQ"
         >
           <div class="accordion-body">
-            Puedes contactarnos a través del formulario de contacto, WhatsApp o correo electrónico. Comenzaremos con una reunión para entender tu idea y requisitos, y posteriormente te proporcionaremos una propuesta personalizada que se ajuste a tus necesidades.
+            Contacta por WhatsApp o formulario. Hacemos un diagnóstico de 15-30 minutos para entender tu proceso actual y dónde se pierde tiempo o dinero. Luego te enviamos una propuesta con alcance, estimación y plan de trabajo.
           </div>
         </div>
       </div>
@@ -59,7 +59,7 @@
           data-bs-parent="#accordionFAQ"
         >
           <div class="accordion-body">
-            Utilizamos las tecnologías más demandadas y avanzadas del mercado, incluyendo Angular, Vue, React, jQuery, Laravel, React Native, Docker, Firebase, mongodb, MySQL, entre otras. Además, estamos preparados para integrar cualquier otra tecnología que se requiera para satisfacer las necesidades específicas de tu proyecto. Esta versatilidad nos permite ofrecer soluciones altamente personalizadas y adaptadas a los requisitos únicos de cada cliente, garantizando resultados óptimos y eficientes.          </div>
+            Laravel para sistemas web robustos, MySQL para bases de datos escalables, React Native para apps móviles, Docker para despliegues consistentes. Stack moderno que garantiza seguridad, escalabilidad y mantenibilidad a largo plazo.          </div>
         </div>
       </div>
 
@@ -84,7 +84,7 @@
           data-bs-parent="#accordionFAQ"
         >
           <div class="accordion-body">
-            Sí, ofrecemos planes de mantenimiento y soporte adaptables a tus necesidades. Nuestro objetivo es asegurar que tu plataforma permanezca actualizada y funcione de manera eficiente a lo largo del tiempo, brindándote tranquilidad y soporte continuo.
+            Sí. Ofrecemos mantenimiento y soporte para que tu sistema siga funcionando sin interrupciones. Actualizaciones, correcciones y mejoras cuando las necesites.
           </div>
         </div>
       </div>
@@ -110,7 +110,7 @@
           data-bs-parent="#accordionFAQ"
         >
           <div class="accordion-body">
-            El tiempo de desarrollo varía según la complejidad y el alcance del proyecto. Después de la fase de análisis, te proporcionaremos un cronograma detallado que generalmente oscila entre unas pocas semanas y varios meses, asegurando una entrega puntual y de calidad.
+            Depende del alcance. Después del diagnóstico (15-30 min) y blueprint (1-2 semanas), te damos un cronograma detallado. Desarrollo por etapas: ves avance cada 2 semanas. Proyectos típicos: 1-3 meses según complejidad.
           </div>
         </div>
       </div>
@@ -136,7 +136,7 @@
           data-bs-parent="#accordionFAQ"
         >
           <div class="accordion-body">
-            Nuestro enfoque es modular y escalable. Si tu proyecto requiere nuevas funcionalidades o módulos, podemos integrarlos fácilmente dentro de tu plataforma existente. Esto permite que tu negocio crezca de manera ordenada y que tu sistema se adapte a tus necesidades cambiantes sin inconvenientes.
+            Sí. Diseñamos sistemas modulares y escalables. Nuevas funcionalidades se integran sin problemas. Tu sistema crece con tu negocio sin necesidad de empezar desde cero.
           </div>
         </div>
       </div>
@@ -162,7 +162,7 @@
           data-bs-parent="#accordionFAQ"
         >
           <div class="accordion-body">
-            Implementamos sólidas prácticas de seguridad desde el inicio de cada proyecto, incluyendo cifrado de datos de última generación y conexiones SSL para proteger la transmisión de información. Defendemos tus aplicaciones contra amenazas comunes como inyecciones SQL y ataques XSS. Además, trabajamos con servidores y proveedores de alta reputación para garantizar la integridad y confidencialidad de tus datos. Nos mantenemos actualizados con las últimas tecnologías y protocolos de seguridad para ofrecerte una protección continua y efectiva.
+            Seguridad desde el inicio: cifrado de datos, conexiones SSL, protección contra inyecciones SQL y XSS. Servidores seguros con respaldos automáticos. Cumplimiento de estándares para proteger tu información y la de tus clientes.
           </div>
         </div>
       </div>
