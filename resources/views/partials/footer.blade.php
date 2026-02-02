@@ -16,20 +16,23 @@
                     <li><a href="{{ config('site.useful_links.contact') }}" rel="noopener">Contacto</a></li>
                 </ul>
             </div>
-            <!-- Columna 3 -->
+            <!-- Columna 3: NAP (Name, Address, Phone) -->
             <div class="col-12 col-md-4 mb-4">
                 <h3>Contáctanos</h3>
-                <p>
+                <p class="mb-2">
                     <i class="fas fa-phone-alt" role="img" aria-hidden="true"></i>
-                    <a href="tel:{{ config('site.contact.phone') }}">{{ config('site.contact.phone') }}</a>
+                    <a href="tel:{{ preg_replace('/\s+/', '', config('site.contact.phone')) }}" aria-label="Llamar por teléfono">{{ config('site.contact.phone') }}</a>
                 </p>
-                <p>
+                <p class="mb-2">
                     <i class="fas fa-envelope" role="img" aria-hidden="true"></i>
-                    <a href="mailto:{{ config('site.contact.email') }}">{{ config('site.contact.email') }}</a>
+                    <a href="mailto:{{ config('site.contact.email') }}" aria-label="Enviar correo">{{ config('site.contact.email') }}</a>
                 </p>
-                <p>
+                <p class="mb-0">
                     <i class="fas fa-map-marker-alt" role="img" aria-hidden="true"></i>
                     {{ config('site.contact.address') }}
+                    @if(config('site.contact.maps_url'))
+                        <span class="d-block small mt-1"><a href="{{ config('site.contact.maps_url') }}" target="_blank" rel="noopener noreferrer" class="text-decoration-none" aria-label="Abrir ubicación en Google Maps">Abrir en Google Maps</a></span>
+                    @endif
                 </p>
             </div>
         </div>

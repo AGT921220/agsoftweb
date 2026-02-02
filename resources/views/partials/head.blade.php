@@ -3,9 +3,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
-      content="Servicios de desarrollo web, creación de páginas web y aplicaciones móviles, formateo y reparación de computadoras en Monterrey y San Nicolás, Nuevo León.">
-    <meta name="keywords"
-      content="Desarrollo Web Monterrey, Páginas Web San Nicolás, Aplicaciones Móviles Nuevo León, Formateo de Computadoras, Reparación de Computadoras, Monterrey, San Nicolás, Nuevo León">
+      content="Creamos páginas y sistemas web a medida (Laravel) para negocios en Monterrey y NL. Cotiza por WhatsApp y recibe respuesta rápida.">
     <meta name="geo.region" content="MX-NLE">
     <meta name="geo.placename" content="Monterrey">
     <meta name="geo.placename" content="San Nicolás">
@@ -15,7 +13,28 @@
     <meta name="robots" content="index, follow">
     <meta name="generator" content="Laravel">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>AgSoftWeb - Desarrolla el Futuro de tu Negocio</title>
+    <title>Desarrollo Web en Monterrey | Sistemas y Landing que Venden - AG SoftWeb</title>
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ url('/') }}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url('/') }}">
+    <meta property="og:title" content="Desarrollo Web en Monterrey | Sistemas y Landing que Venden - AG SoftWeb">
+    <meta property="og:description" content="Creamos páginas y sistemas web a medida (Laravel) para negocios en Monterrey y NL. Cotiza por WhatsApp y recibe respuesta rápida.">
+    <meta property="og:image" content="{{ asset('images/logo.png') }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:site_name" content="AG SoftWeb">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{ url('/') }}">
+    <meta name="twitter:title" content="Desarrollo Web en Monterrey | Sistemas y Landing que Venden - AG SoftWeb">
+    <meta name="twitter:description" content="Creamos páginas y sistemas web a medida (Laravel) para negocios en Monterrey y NL. Cotiza por WhatsApp y recibe respuesta rápida.">
+    <meta name="twitter:image" content="{{ asset('images/logo.png') }}">
 
     <!-- Bootstrap CSS (Carga diferida) -->
     <link

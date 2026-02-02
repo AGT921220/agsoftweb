@@ -6,19 +6,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
-        content="Servicios de desarrollo web, creación de páginas web y aplicaciones móviles, formateo y reparación de computadoras en Monterrey y San Nicolás, Nuevo León.">
-    <meta name="keywords"
-        content="Desarrollo Web Monterrey, Páginas Web San Nicolás, Aplicaciones Móviles Nuevo León, Formateo de Computadoras, Reparación de Computadoras, Monterrey, San Nicolás, Nuevo León">
+        content="Creamos p?ginas y sistemas web a medida (Laravel) para negocios en Monterrey y NL. Cotiza por WhatsApp y recibe respuesta r?pida.">
     <meta name="geo.region" content="MX-NLE">
-    <meta name="geo.placename" content="Monterrey">
-    <meta name="geo.placename" content="San Nicolás">
-    <meta name="geo.position" content="25.686614;-100.316112">
-    <meta name="ICBM" content="25.686614, -100.316112">
+    <meta name="geo.placename" content="San Pedro Garza Garc?a">
+    <meta name="geo.position" content="25.6532;-100.3573">
+    <meta name="ICBM" content="25.6532, -100.3573">
     <meta name="author" content="AgSoftWeb">
     <meta name="robots" content="index, follow">
     <meta name="generator" content="Laravel">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>AgSoftWeb - Desarrolla el Futuro de tu Negocio</title>
+    <title>Desarrollo Web en Monterrey | Sistemas y Landing que Venden - AG SoftWeb</title>
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ url('/') }}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url('/') }}">
+    <meta property="og:title" content="Desarrollo Web en Monterrey | Sistemas y Landing que Venden - AG SoftWeb">
+    <meta property="og:description" content="Creamos p?ginas y sistemas web a medida (Laravel) para negocios en Monterrey y NL. Cotiza por WhatsApp y recibe respuesta r?pida.">
+    <meta property="og:image" content="{{ asset('images/logo.png') }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:site_name" content="AG SoftWeb">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{ url('/') }}">
+    <meta name="twitter:title" content="Desarrollo Web en Monterrey | Sistemas y Landing que Venden - AG SoftWeb">
+    <meta name="twitter:description" content="Creamos p?ginas y sistemas web a medida (Laravel) para negocios en Monterrey y NL. Cotiza por WhatsApp y recibe respuesta r?pida.">
+    <meta name="twitter:image" content="{{ asset('images/logo.png') }}">
+    
+    <!-- JSON-LD LocalBusiness Schema (SEO local, NAP consistente) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "{{ config('site.name') }}",
+        "description": "Desarrollo web y sistemas a medida para negocios. Creamos páginas web, sistemas personalizados y aplicaciones móviles.",
+        "url": "{{ url('/') }}",
+        "telephone": "+52-81-1487-5729",
+        "email": "{{ config('site.contact.email') }}",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "{{ config('site.contact.address_street') }}",
+            "addressLocality": "{{ config('site.contact.address_locality') }}",
+            "addressRegion": "{{ config('site.contact.address_region') }}",
+            "postalCode": "{{ config('site.contact.postal_code') }}",
+            "addressCountry": "{{ config('site.contact.address_country') }}"
+        },
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "{{ config('site.contact.address_locality') }}"
+            },
+            {
+                "@type": "State",
+                "name": "Nuevo León"
+            }
+        ],
+        "sameAs": [
+            "https://wa.me/5218114875729"
+        ]
+    }
+    </script>
 
     <!-- Favicon -->
     <link rel="icon" href="{{ asset('images/favicon.ico') }}" type="image/x-icon">
@@ -37,7 +89,7 @@
     <!-- SweetAlert2 CSS -->
     <link rel="stylesheet" href="{{ asset('css/sweetalert2.min.css') }}" media="print" onload="this.media='all'" />
 
-    <!-- CSS Crítico Inline para la sección hero -->
+    <!-- CSS Cr?tico Inline para la secci?n hero -->
     <style>
         .hero {
             position: relative;
@@ -151,7 +203,7 @@
             }
         }
 
-        /* Botón Flotante WhatsApp Premium */
+        /* Bot?n Flotante WhatsApp Premium */
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
@@ -214,7 +266,7 @@
             }
         }
 
-        /* Mejoras Estéticas Generales */
+        /* Mejoras Est?ticas Generales */
         .card {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             border-radius: 12px;
@@ -337,13 +389,13 @@
             background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(16, 185, 129, 0.1));
         }
 
-        /* Animación suave para elementos con AOS */
+        /* Animaci?n suave para elementos con AOS */
         [data-aos] {
             transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
     </style>
 
-    <!-- Carga Asíncrona del CSS Principal -->
+    <!-- Carga As?ncrona del CSS Principal -->
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="{{ asset('css/app.min.css') }}" media="print" onload="this.media='all'">
 
@@ -361,7 +413,7 @@
     // Inicializa LogRocket con tu proyecto
     LogRocket.init('agsoftweb/pagina-agsoftweb');
 
-    // Genera un ID aleatorio por sesión para invitados
+    // Genera un ID aleatorio por sesi?n para invitados
     const guestId = 'guest-' + Math.random().toString(36).substring(2, 10);
 
     // Llama a identify para marcar como completado en LogRocket
@@ -418,13 +470,13 @@
 </head>
 
 <body>
-    <!-- Botón flotante de WhatsApp -->
+    <!-- Bot?n flotante de WhatsApp -->
     @include('components.whatsapp-float')
 
     <!-- Navbar -->
     @include('partials.nav')
 
-    <!-- Contenido dinámico -->
+    <!-- Contenido din?mico -->
     @yield('content')
 
     <!-- Footer -->

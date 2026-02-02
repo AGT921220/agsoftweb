@@ -56,7 +56,7 @@
         <div class="row mt-5">
             <div class="col-12 text-center">
                 <p class="lead mb-4">¿Prefieres contactar directamente?</p>
-                <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
+                <div class="d-flex flex-column flex-md-row justify-content-center gap-3 flex-wrap">
                     <x-whatsapp-button 
                         label="Cotizar por WhatsApp" 
                         tracking="whatsapp_contact_alternative"
@@ -65,6 +65,53 @@
                         label="Enviar correo" 
                         tracking="email_contact_alternative"
                         class="shadow-lg" />
+                    @if(config('site.contact.maps_url'))
+                        <a href="{{ config('site.contact.maps_url') }}" target="_blank" rel="noopener noreferrer"
+                           class="btn btn-outline-primary btn-lg shadow-lg"
+                           aria-label="Cómo llegar: abrir en Google Maps">
+                            <i class="fas fa-map-marker-alt me-2" aria-hidden="true"></i>Cómo llegar
+                        </a>
+                    @endif
+                </div>
+            </div>
+        </div>
+
+        <!-- Bloque Ubicación (NAP + mapa) -->
+        <div class="row mt-5 pt-4" id="location" data-aos="fade-up">
+            <div class="col-12 col-lg-10 mx-auto">
+                <h3 class="h5 mb-3">Ubicación</h3>
+                <p class="text-muted small mb-3">Estamos en San Pedro Garza García. Visítanos cuando quieras.</p>
+                <div class="row g-3 align-items-stretch">
+                    <div class="col-12 col-md-5">
+                        <div class="location-block border rounded p-3 bg-light h-100">
+                            @include('partials.location-block')
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-7">
+                        @if(config('site.contact.maps_embed_url'))
+                            <div class="location-map-wrapper border rounded overflow-hidden shadow-sm">
+                                <iframe
+                                    src="{{ config('site.contact.maps_embed_url') }}"
+                                    width="100%"
+                                    height="280"
+                                    style="border:0; min-height: 250px;"
+                                    allowfullscreen=""
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    title="Mapa: ubicación en San Pedro Garza García"
+                                    class="d-block"
+                                ></iframe>
+                            </div>
+                            @if(config('site.contact.maps_url'))
+                                <p class="small mt-2 mb-0 text-center">
+                                    <a href="{{ config('site.contact.maps_url') }}" target="_blank" rel="noopener noreferrer" class="text-decoration-none" aria-label="Abrir en Google Maps para ver rutas">
+                                        Abrir en Google Maps para rutas y direcciones
+                                        <i class="fas fa-external-link-alt ms-1" aria-hidden="true"></i>
+                                    </a>
+                                </p>
+                            @endif
+                        @endif
+                    </div>
                 </div>
             </div>
         </div>
