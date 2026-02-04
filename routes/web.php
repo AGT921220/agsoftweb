@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Mail;
 // });
 
 Route::resource('/', HomeController::class)->only('index');
+
+Route::get('/aviso-de-privacidad', function () {
+    return view('legal.aviso-privacidad');
+})->name('aviso-privacidad');
+
 Route::resource('/contact', ContactController::class)
 //->only('store')
 ;

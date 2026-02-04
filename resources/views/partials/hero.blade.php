@@ -5,16 +5,11 @@
         alt="Imagen de fondo principal"> --}}
 
 
-        <link rel="preload" as="image" href="/images/hero.avif" imagesrcset="/images/hero-small.avif 768w, /images/hero.avif 1920w" imagesizes="(max-width: 768px) 100vw, 1920px" />
+        <link rel="preload" as="image" href="/images/oficina_fondo.jpeg" type="image/jpeg" />
 
         <img
           class="hero-bg"
-          src="/images/hero.avif"
-          srcset="
-            /images/hero-small.avif 100vw,
-            /images/hero.avif 100vw
-          "
-          sizes="(max-width: 768px) 100vw, 100vh"
+          src="/images/oficina_fondo.jpeg"
           width="1920"
           height="1080"
           alt="Imagen de fondo principal">

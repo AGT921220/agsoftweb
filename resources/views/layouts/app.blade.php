@@ -15,7 +15,7 @@
     <meta name="robots" content="index, follow">
     <meta name="generator" content="Laravel">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Desarrollo Web en Monterrey | Sistemas y Landing que Venden - AG SoftWeb</title>
+    <title>@yield('title', 'Desarrollo Web en Monterrey | Sistemas y Landing que Venden - AG SoftWeb')</title>
     
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ url('/') }}">
@@ -455,7 +455,7 @@
 
     <!-- App JS -->
     <script defer src="{{ asset('js/app.js') }}"></script>
-    <link rel="preload" as="image" href="/images/hero.avif" type="image/avif">
+    <link rel="preload" as="image" href="/images/oficina_fondo.jpeg" type="image/jpeg">
 
 <script src="https://www.google.com/recaptcha/api.js?render={{ config('app.captcha_public_key') }}"></script>
 

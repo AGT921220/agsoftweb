@@ -14,6 +14,7 @@
                     {{-- <li><a href="{{ config('site.useful_links.projects') }}" rel="noopener">Proyectos</a></li> --}}
                     {{-- <li><a href="{{ config('site.useful_links.faq') }}" rel="noopener">FAQ</a></li> --}}
                     <li><a href="{{ config('site.useful_links.contact') }}" rel="noopener">Contacto</a></li>
+                    <li><a href="{{ route('aviso-privacidad') }}" rel="noopener">Aviso de Privacidad</a></li>
                 </ul>
             </div>
             <!-- Columna 3: NAP (Name, Address, Phone) -->
