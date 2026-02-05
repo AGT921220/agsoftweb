@@ -22,7 +22,6 @@
 <a 
     href="{{ $url }}" 
     class="btn btn-primary btn-{{ $size }} {{ $class }}"
-    data-tracking="{{ $tracking }}"
-    onclick="if(typeof gtag !== 'undefined') { gtag('event', 'click_email', {'event_category': 'engagement', 'event_label': '{{ $tracking }}'}); } console.log('Email click: {{ $tracking }}');">
+    data-tracking="{{ $tracking }}">
     <i class="fas fa-envelope me-2"></i>{{ $label }}
 </a>

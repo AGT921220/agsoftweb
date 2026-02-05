@@ -31,10 +31,7 @@
                         placeholder="¿Qué proceso llevas en Excel? Ejemplo: Control de inventario, reportes de ventas, gestión de permisos..." required></textarea>
                 </div>
                 <div class="d-grid gap-2 col-12 mx-auto" data-aos="fade-up" data-aos-delay="800">
-                    <button 
-                        type="submit" 
-                        class="btn btn-primary btn-lg"
-                        onclick="if(typeof gtag !== 'undefined') { gtag('event', 'lead_form_submit', {'event_category': 'conversion', 'event_label': 'contact_form'}); } console.log('Form submit');">
+                    <button type="submit" class="btn btn-primary btn-lg">
                         Enviar
                     </button>
                 </div>

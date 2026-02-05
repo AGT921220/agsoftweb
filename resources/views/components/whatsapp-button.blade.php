@@ -20,7 +20,6 @@
     target="_blank" 
     rel="noopener noreferrer"
     class="btn btn-success btn-{{ $size }} {{ $class }}"
-    data-tracking="{{ $tracking }}"
-    onclick="if(typeof gtag !== 'undefined') { gtag('event', 'click_whatsapp', {'event_category': 'engagement', 'event_label': '{{ $tracking }}'}); } console.log('WhatsApp click: {{ $tracking }}');">
+    data-tracking="{{ $tracking }}">
     <i class="fab fa-whatsapp me-2"></i>{{ $label }}
 </a>

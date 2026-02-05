@@ -423,38 +423,24 @@
   }
 </script>
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154969113-1"></script>
+    {{-- Google Analytics 4 (gtag): un solo script, configurable por ENV --}}
+    @if(config('analytics.enabled') && config('analytics.provider') === 'gtag' && config('analytics.ga4_measurement_id'))
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ config('analytics.ga4_measurement_id') }}"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+        function gtag(){ dataLayer.push(arguments); }
         gtag('js', new Date());
-        gtag('config', 'UA-154969113-1');
+        gtag('config', '{{ config('analytics.ga4_measurement_id') }}');
     </script>
-
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K4XF8WCYPE"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-K4XF8WCYPE');
-    </script>
-
+    @endif
 
     <!-- SweetAlert2 JS -->
     <script defer src="{{ asset('js/sweetalert2.min.js') }}"></script>
 
     <!-- App JS -->
     <script defer src="{{ asset('js/app.js') }}"></script>
+    <!-- Analytics: eventos de conversión (lead). No-op si gtag no está cargado. -->
+    <script defer src="{{ asset('js/analytics.js') }}"></script>
     <link rel="preload" as="image" href="/images/oficina_fondo.jpeg" type="image/jpeg">
 
 <script src="https://www.google.com/recaptcha/api.js?render={{ config('app.captcha_public_key') }}"></script>
