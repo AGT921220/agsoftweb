@@ -61,6 +61,22 @@ Todos se envían con `gtag('event', nombre, { event_category: 'lead' | 'engageme
 
 ---
 
+## 4b. Google Ads – Conversión `ads_conversion_Contacto_1`
+
+Para campañas de Google Ads se usa el helper **gtagSendEvent** (navegación retrasada): se envía el evento de conversión y, tras el callback o 2 s de timeout, se ejecuta la acción (ir al enlace o enviar el formulario).
+
+| Acción | Comportamiento |
+|--------|----------------|
+| Clic en WhatsApp (wa.me, flotante, botones) | Se dispara `ads_conversion_Contacto_1`, luego se abre el enlace. |
+| Clic en correo (mailto:) | Se dispara `ads_conversion_Contacto_1`, luego se abre el mailto. |
+| Clic en CTA con enlace (p. ej. "Contacto" → #contact) | Se dispara la conversión, luego se navega al href. |
+| Envío del formulario de contacto | Se dispara la conversión, luego se hace el submit real (fetch en `app.js`). |
+
+- **Helper:** definido en `resources/views/layouts/app.blade.php` como `window.gtagSendEvent(urlOrCallback)`.
+- **Uso:** `public/js/analytics.js` intercepta los clics en capture y, si existe `gtagSendEvent`, hace `preventDefault`, envía el evento y después ejecuta la URL o el callback (formulario con `requestSubmit()`).
+
+---
+
 ## 5. Cómo probar
 
 ### En consola del navegador

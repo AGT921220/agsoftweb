@@ -434,6 +434,21 @@
     </script>
     @endif
 
+    {{-- Google Ads: conversión retrasada (navegación o callback después de enviar el evento) --}}
+    <script>
+        window.gtagSendEvent = function (urlOrCallback) {
+            var callback = typeof urlOrCallback === 'function'
+                ? urlOrCallback
+                : function () { if (typeof urlOrCallback === 'string') window.location = urlOrCallback; };
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'ads_conversion_Contacto_1', { event_callback: callback, event_timeout: 2000 });
+            } else {
+                callback();
+            }
+            return false;
+        };
+    </script>
+
     <!-- SweetAlert2 JS -->
     <script defer src="{{ asset('js/sweetalert2.min.js') }}"></script>
 

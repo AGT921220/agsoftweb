@@ -4,6 +4,8 @@ PARTIALS = nav.blade.php hero.blade.php services.blade.php clients.blade.php \
 PARTIALS_DIR = partials
 TARGET = index.blade.php
 
+include .env
+
 all: $(PARTIALS_DIR) $(addprefix $(PARTIALS_DIR)/, $(PARTIALS)) $(TARGET)
 
 $(PARTIALS_DIR):
@@ -19,3 +21,5 @@ import-db:
 	@docker exec -i mysql-gan mysql -u user -ppassword db < storage/app/gan.sql
 enter:
 	docker exec -it php-agsoftweb /bin/bash;
+server-enter:
+	@ssh root@${SERVER_IP}
