@@ -5,7 +5,7 @@ services:
     container_name: nginx-agsoftweb
     restart: always
     ports:
-      - "${PORT_NGINX:-80}:80"
+      - "${PORT_NGINX:-8000}:80"
     volumes:
       - ./:/var/www/html
       - ./docker/nginx/${NGINX_CONF_FILE:-default.conf}:/etc/nginx/conf.d/default.conf
