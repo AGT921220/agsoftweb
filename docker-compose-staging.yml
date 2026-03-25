@@ -1,0 +1,37 @@
+services:
+
+  nginx:
+    image: nginx:stable-alpine
+    container_name: nginx-agsoftweb
+    restart: always
+    ports:
+      - "${PORT_NGINX:-80}:80"
+    volumes:
+      - ./:/var/www/html
+      - ./docker/nginx/${NGINX_CONF_FILE:-default.conf}:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php
+    networks:
+      - appnetwork
+
+  php:
+    environment:
+      XDEBUG_MODE: ${XDEBUG_MODE:-off}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: php-agsoftweb
+    restart: always
+    volumes:
+      - ./:/var/www/html/
+    ports:
+      - "9022:9000"
+    networks:
+      - appnetwork
+    depends_on:
+      redis:
+        condition: service_healthy
+
+networks:
+  appnetwork:
+    external: true
