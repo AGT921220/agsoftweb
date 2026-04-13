@@ -25,10 +25,10 @@ class HomeController extends Controller
         $requestUri = $_SERVER['REQUEST_URI'] ?? null;
         $queryString = $_SERVER['QUERY_STRING'] ?? null;
 
+        info($_SERVER);
         // dd(config('database.connections.mysql'));
         // $test = DB::table('visitas')->get();
 
-        info('Visits count: ' . Visit::count());
         $visit = new Visit();
         // dd($visit);
         $visit->user_agent = $userAgent;
@@ -39,7 +39,6 @@ class HomeController extends Controller
         $visit->query_string = $queryString;
         $visit->source = $source;
         $visit->campaign = $campaign;
-        info('Saving visit: ' . json_encode($visit));
         $visit->save();
     }
 }
