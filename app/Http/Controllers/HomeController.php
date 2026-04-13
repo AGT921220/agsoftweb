@@ -29,7 +29,7 @@ class HomeController extends Controller
         // $test = DB::table('visitas')->get();
 
         $visit = new Visit();
-        // dd($visit);
+        dd($visit);
         $visit->user_agent = $userAgent;
         $visit->ip_address = $ipAddress;
         $visit->referer = $referer;
