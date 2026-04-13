@@ -29,7 +29,7 @@ class HomeController extends Controller
         // $test = DB::table('visitas')->get();
 
         $visit = new Visit();
-        dd($visit);
+        // dd($visit);
         $visit->user_agent = $userAgent;
         $visit->ip_address = $ipAddress;
         $visit->referer = $referer;
@@ -38,6 +38,7 @@ class HomeController extends Controller
         $visit->query_string = $queryString;
         $visit->flyer = $flyer;
         $visit->campaign = $campaign;
+        info('Saving visit: ' . json_encode($visit));
         $visit->save();
     }
 }
