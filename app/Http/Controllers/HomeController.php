@@ -12,7 +12,6 @@ class HomeController extends Controller
     {
         // dd(config('database.connections.mysql'));
 
-        info('HomeController@index called');
         $this->saveRequest($request->input('source'), $request->input('campaign'));
         return view('index');
     }
