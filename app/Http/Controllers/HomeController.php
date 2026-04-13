@@ -8,14 +8,14 @@ use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         // dd(config('database.connections.mysql'));
 
-        $this->saveRequest();
+        $this->saveRequest($request->input('flyer'), $request->input('campaign'));
         return view('index');
     }
-    private function saveRequest()
+    private function saveRequest(? string $flyer, ?string $campaign):void
     {
         $userAgent = $_SERVER['HTTP_USER_AGENT'] ?? null;
         $ipAddress = $_SERVER['REMOTE_ADDR'] ?? null;
@@ -35,8 +35,8 @@ class HomeController extends Controller
         $visit->request_method = $requestMethod;
         $visit->request_uri = $requestUri;
         $visit->query_string = $queryString;
+        $visit->flyer = $flyer;
+        $visit->campaign = $campaign;
         $visit->save();
-        info($_SERVER);
-
     }
 }
