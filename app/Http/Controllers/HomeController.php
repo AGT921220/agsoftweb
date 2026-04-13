@@ -18,13 +18,13 @@ class HomeController extends Controller
     private function saveRequest(? string $source, ?string $campaign):void
     {
         $userAgent = $_SERVER['HTTP_USER_AGENT'] ?? null;
-        $ipAddress = $_SERVER['REMOTE_ADDR'] ?? null;
+        $ipAddress = $_SERVER['HTTP_X_FORWARDED_FOR'] ?? null;
         $referer = $_SERVER['HTTP_REFERER'] ?? null;
         $requestMethod = $_SERVER['REQUEST_METHOD'] ?? null;
         $requestUri = $_SERVER['REQUEST_URI'] ?? null;
         $queryString = $_SERVER['QUERY_STRING'] ?? null;
 
-        info($_SERVER);
+        // info($_SERVER);
         // dd(config('database.connections.mysql'));
         // $test = DB::table('visitas')->get();
 
