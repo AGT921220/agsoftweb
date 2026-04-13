@@ -12,6 +12,7 @@ class HomeController extends Controller
     {
         // dd(config('database.connections.mysql'));
 
+        info('HomeController@index called');
         $this->saveRequest($request->input('flyer'), $request->input('campaign'));
         return view('index');
     }
