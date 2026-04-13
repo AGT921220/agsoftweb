@@ -28,6 +28,7 @@ class HomeController extends Controller
         // dd(config('database.connections.mysql'));
         // $test = DB::table('visitas')->get();
 
+        info('Visits count: ' . Visit::count());
         $visit = new Visit();
         // dd($visit);
         $visit->user_agent = $userAgent;
