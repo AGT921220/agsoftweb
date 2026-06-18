@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ConstanciaController;
 use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Mail;
 // });
 
 Route::resource('/', HomeController::class)->only('index');
+Route::resource('constancia', ConstanciaController::class)->only('index');
 
 Route::get('/aviso-de-privacidad', function () {
     return view('legal.aviso-privacidad');
